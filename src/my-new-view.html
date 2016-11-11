@@ -1,4 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/emoji-rain/emoji-rain.html">
 
 <dom-module id="my-new-view">
   <template>
@@ -8,13 +10,22 @@
         padding: 16px;
       }
     </style>
-
-    <h1>New view</h1>
+    <h1 id="title">Hallo</h1>
+    <emoji-rain id="emojiDrops" drops="50" active></emoji-rain>
+    <paper-slider id="drops" min="0" max="250" value="125"></paper-slider>
   </template>
+  <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
   <script>
     Polymer({
       is: 'my-new-view'
     });
+
+    
+
+    // var drops = this.$.drops;
+    // drops.addEventListener('value-change', function() {
+    //   document.querySelector('#emojiDrops').setAttribute("drops") = drops.value;
+    // });
   </script>
 </dom-module>
 
